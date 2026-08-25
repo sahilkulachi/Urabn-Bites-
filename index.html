@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urban Bites</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Urban Bites</div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header id="home">
+    <div class="hero-content">
+      <p class="small-title">WELCOME TO URBAN BITES</p>
+      <h1>Delicious Food,<br>Made Fresh</h1>
+      <p>Fresh ingredients. Great taste. Happy moments.</p>
+      <button onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">
+        View Menu
+      </button>
+    </div>
+  </header>
+
+  <section id="menu">
+    <p class="section-subtitle">OUR SPECIALS</p>
+    <h2>Our Menu</h2>
+
+    <div class="menu-grid">
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80" alt="Classic Burger">
+        <div class="card-content">
+          <h3>Classic Burger</h3>
+          <p>Juicy beef burger with fresh vegetables and special sauce.</p>
+          <div class="price-row">
+            <strong>$8.99</strong>
+            <button onclick="orderFood('Classic Burger')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=80" alt="Cheese Pizza">
+        <div class="card-content">
+          <h3>Cheese Pizza</h3>
+          <p>Freshly baked pizza topped with delicious melted cheese.</p>
+          <div class="price-row">
+            <strong>$10.99</strong>
+            <button onclick="orderFood('Cheese Pizza')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1562967916-eb82221dfb92?auto=format&fit=crop&w=800&q=80" alt="Crispy Chicken">
+        <div class="card-content">
+          <h3>Crispy Chicken</h3>
+          <p>Golden crispy chicken served with our special sauce.</p>
+          <div class="price-row">
+            <strong>$9.99</strong>
+            <button onclick="orderFood('Crispy Chicken')">Order Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80" alt="Loaded Fries">
+        <div class="card-content">
+          <h3>Loaded Fries</h3>
+          <p>Crispy golden fries loaded with tasty toppings.</p>
+          <div class="price-row">
+            <strong>$6.99</strong>
+            <button onclick="orderFood('Loaded Fries')">Order Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="order" class="order-section">
+    <p class="section-subtitle">PLACE YOUR ORDER</p>
+    <h2>Order Now</h2>
+    <form id="orderForm" onsubmit="placeOrder(event)">
+      <input type="text" id="customerName" placeholder="Your Name" required>
+      <input type="tel" id="customerPhone" placeholder="Phone Number" required>
+      <select id="foodItem" required>
+        <option value="">Select Food</option>
+        <option value="Classic Burger">Classic Burger</option>
+        <option value="Cheese Pizza">Cheese Pizza</option>
+        <option value="Crispy Chicken">Crispy Chicken</option>
+        <option value="Loaded Fries">Loaded Fries</option>
+      </select>
+      <input type="number" id="quantity" min="1" value="1" placeholder="Quantity" required>
+      <textarea id="address" placeholder="Delivery Address" rows="4" required></textarea>
+      <button type="submit">Place Order</button>
+    </form>
+  </section>
+
+  <section id="about" class="about-section">
+    <p class="section-subtitle">ABOUT US</p>
+    <h2>Made With Love</h2>
+    <p>At Urban Bites, we believe great food brings people together. We use fresh ingredients and prepare every meal with care to give you a delicious experience.</p>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <p class="section-subtitle">GET IN TOUCH</p>
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <p>📞 +92 300 1234567</p>
+      <p>📧 urbanbites@example.com</p>
+      <p>📍 Your City, Pakistan</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Urban Bites. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
