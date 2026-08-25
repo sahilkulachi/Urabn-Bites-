@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #faf7f2;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 7%;
+  box-shadow: 0 3px 15px rgba(0,0,0,.08);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: #e63946;
+}
+
+/* Hero */
+header {
+  min-height: 88vh;
+  background: linear-gradient(135deg,#ff6b35,#e63946);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.small-title,
+.section-subtitle {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  color: #e63946;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 62px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero-content > p:not(.small-title) {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.hero-content button {
+  border: none;
+  background: white;
+  color: #e63946;
+  padding: 15px 32px;
+  border-radius: 30px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Menu */
+#menu {
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 25px;
+}
+
+#menu h2,
+.about-section h2,
+.contact-section h2,
+.order-section h2 {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 40px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.menu-card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,.09);
+}
+
+.menu-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-content {
+  padding: 25px;
+}
+
+.card-content h3 {
+  color: #e63946;
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+
+.card-content p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-row strong {
+  font-size: 22px;
+}
+
+.price-row button,
+.order-section button {
+  border: none;
+  background: #e63946;
+  color: white;
+  padding: 11px 18px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Order */
+.order-section {
+  background: white;
+  padding: 80px 25px;
+}
+
+#orderForm {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#orderForm input,
+#orderForm select,
+#orderForm textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+#orderForm textarea {
+  resize: vertical;
+}
+
+#orderForm button {
+  padding: 15px;
+  font-size: 17px;
+}
+
+/* About */
+.about-section {
+  background: #fff;
+  padding: 80px 25px;
+  text-align: center;
+}
+
+.about-section > p:last-child {
+  max-width: 750px;
+  margin: auto;
+  color: #666;
+  font-size: 18px;
+}
+
+/* Contact */
+.contact-section {
+  background: #222;
+  color: white;
+  padding: 80px 25px;
+  text-align: center;
+}
+
+.contact-info {
+  font-size: 18px;
+  line-height: 2;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 22px;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  nav {
+    padding: 10px 20px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .logo img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .nav-links {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-content h1 {
+    font-size: 44px;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #menu h2,
+  .about-section h2,
+  .contact-section h2,
+  .order-section h2 {
+    font-size: 34px;
+  }
+}
